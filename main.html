@@ -22,6 +22,53 @@
         </ul>
     </nav>
 </header>
+<main>
+    <div class="img-container">
+        <img class="main-foto" src="/images/BiodiversidadMain.jpeg" alt="Paramo paisaje">
+        <div class="text-container">
+            <h1>Explora la Biodiversidad de <br> Cundinamarca y Boyacá</h1>
+        </div>
+        <div class="text-content">
+            <article>
+                <p>
+                    Bienvenidos a un viaje fascinante a través de la increíble biodiversidad de los departamentos de Cundinamarca y Boyacá. Estas regiones, ricas en paisajes naturales y vida silvestre, nos ofrecen un vistazo a la magnífica variedad de ecosistemas que existen en Colombia. Desde los imponentes páramos y los frondosos bosques andinos, hasta los tranquilos humedales y los misteriosos bosques de niebla, cada rincón de estos departamentos alberga una sorprendente diversidad de flora y fauna.
+                </p>
+                <br>
+                <p>
+                    Nuestro objetivo es no solo mostrarte la belleza natural de estas áreas, sino también inspirarte a proteger y preservar estos tesoros ecológicos. La biodiversidad no es solo una característica de nuestro entorno; es esencial para nuestro bienestar y el equilibrio de la naturaleza. Te invitamos a conocer más sobre estos ecosistemas y a participar activamente en su conservación. Juntos, podemos asegurar que las futuras generaciones también puedan disfrutar de la riqueza natural de Cundinamarca y Boyacá.
+                </p>
+            </article>
+        </div>
+    </div>
+    <div class="form-container">
+    <section class="suscribirse">
+        <h2>Suscríbete a nuestro Newsletter</h2>
+        <form action="suscribirse.html" method="post">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+            <br>
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+            <label for="frequency">Frecuencia del Boletín:</label>
+            <div class="radio-group">
+                <input type="radio" id="daily" name="frequency" value="daily">
+                <label for="daily">Diaria</label>
 
+                <input type="radio" id="weekly" name="frequency" value="weekly" checked>
+                <label for="weekly">Semanal</label>
+
+                <input type="radio" id="monthly" name="frequency" value="monthly">
+                <label for="monthly">Mensual</label>
+            </div>
+
+            <label for="topics">Temas de Interés:</label>
+            <input type="text" id="topics" name="topics" placeholder="E.g., Fauna, Flora, Parques Nacionales">
+
+            <button type="submit">Suscribirse</button>
+        </form>
+    </section>
+    </div>
+</main>
 </body>
 </html>
