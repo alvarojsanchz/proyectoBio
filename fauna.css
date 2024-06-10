@@ -46,3 +46,82 @@ header .nav-links li a {
     text-decoration: none;
     color: var(--olive);
 }
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+article {
+    display: flex;
+    align-items: center;
+    background-color: var(--background-color);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+article p {
+    max-width: 55%;
+}
+
+article.right .img-container {
+    order: 2;
+    margin-right: 0;
+    margin-left: 20px;
+}
+
+article.right p {
+    order: 1;
+    text-align: left;
+}
+
+article.left .img-container {
+    order: 1;
+    margin-right: 20px;
+}
+
+article.left p {
+    order: 2;
+}
+
+.img-container {
+    position: relative;
+    max-width: 45%;
+}
+
+.img-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.img-container h2 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+    background-color: var(--base-color);
+    color: var(--dark-green);
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 0 0 8px 8px;
+}
+
+footer {
+    background-color: var(--base-color);
+    padding: 20px 0;
+    text-align: center;
+    color: var(--olive);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
