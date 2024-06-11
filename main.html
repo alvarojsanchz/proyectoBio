@@ -43,13 +43,11 @@
     <div class="form-container">
     <section class="suscribirse">
         <h2>Suscríbete a nuestro Newsletter</h2>
-        <form action="suscribirse.html" method="post">
+        <form class="formulario" action="suscribirse.html" method="post">
             <label for="name">Nombre:</label>
             <input type="text" id="name" name="name" required>
-            <br>
-            <label for="email">Correo Electrónico:</label>
+            <label for="email">E-mail:</label>
             <input type="email" id="email" name="email" required>
-            <br>
             <label for="frequency">Frecuencia del Boletín:</label>
             <div class="radio-group">
                 <input type="radio" id="daily" name="frequency" value="daily">
@@ -64,8 +62,10 @@
 
             <label for="topics">Temas de Interés:</label>
             <input type="text" id="topics" name="topics" placeholder="E.g., Fauna, Flora, Parques Nacionales">
-
-            <button type="submit">Suscribirse</button>
+            <br>
+            <div class="btn-container">
+            <button class="btn" type="submit">Suscribirse</button>
+            </div>
         </form>
     </section>
     </div>
