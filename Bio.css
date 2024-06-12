@@ -61,7 +61,8 @@ header .nav-links li a {
 }
 
 .text-container {
-    width: fit-content;
+    display: grid;
+    width: max-content;
     position: absolute;
     top: 50%;
     left: 60%;
@@ -69,6 +70,7 @@ header .nav-links li a {
 }
 
 main h1 {
+    display: block;
     color: var(--background-color);
     font-size: 4em;
     text-align: right;
@@ -82,10 +84,10 @@ main h1 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 10px;
     padding: 20px;
-    height: fit-content;
+    max-height: 30vh;
 }
 
-/*FORMULARIO*/
+/* FORMULARIO */
 
 .form-container {
     background-color: var(--background-color);
@@ -151,3 +153,41 @@ input {
     background-color: var(--light-green);
     transition: all 150ms ease-in-out;
 }
+
+/* FOOTER */
+
+footer {
+    background-color: var(--base-color);
+    padding: 20px 0;
+    text-align: center;
+    color: var(--olive);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+@media (max-width: 800px)and (orientation:portrait) {
+    .text-container {
+        display: grid;
+        width: max-content;
+        position: absolute;
+        top: 50%;
+        left: 60%;
+        bottom: 1%;
+        transform: translate(-50%, -50%);
+    }
+
+    main h1 {
+        max-width: 80%;
+        display: grid;
+        color: var(--background-color);
+        font-size: 2em;
+        text-align: right;
+    }
+ }
