@@ -45,4 +45,61 @@ header .nav-links li {
 header .nav-links li a {
     text-decoration: none;
     color: var(--olive);
+/*HEAD*/
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    align-items: center;
+    background-color: var(--background-color);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+article {
+    display: flex;
+    align-items: center;
+    background-color: var(--background-color);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.img-container {
+    position: relative;
+    display: flex;
+    max-width: 40%;
+    
+}
+
+.img-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.img-container h4 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+    background-color: var(--base-color);
+    color: var(--dark-green);
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 0 0 8px 8px;
+}
+
+article.right .img-container {
+    order: 2;
+    margin-right: 0;
+    margin-left: 20px;
+}
+
+article.right p {
+    order: 1;
+    text-align: left;
 }
