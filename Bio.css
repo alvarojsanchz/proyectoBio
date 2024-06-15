@@ -1,45 +1,193 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
-*{
+
+:root {
+    --background-color: #fffbe7;
+    --base-color: #e7d5a0;
+    --light-green: #76860a;
+    --olive: #3b400d;
+    --dark-green: #1a1e03; 
+}
+
+* {
     box-sizing: border-box;
-    margin:0;
-    padding; 0;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--background-color);
     font-family: 'Nunito',sans-serif;
     font-size: 20px;
 }
 
-body {
-    background-color:#fff59d;   
-}
-
-.header{
-    background-color: #1b3039;
+header {
+    background-color: var(--base-color);
     display: flex;
     justify-content: space-between;
-    align-items:center;
-    height:120px;
-    padding:5px 10%;
-}
-
-.header .logo{
-    cursor:pointer;
-}
-
-.header .logo img{
-    height:95px;
-    width:auto;
-    transition: all 0.3s;
-}
-
-.header .logo img:hover{
-    transform: scale(1.2);
-}
-
-.header .nav-links{
-    list-style: none;
-}
-
-.header .nav-links li{
-    display: inline-block;
+    align-items: center;
     padding: 0 20px;
+    height: 80px;
 }
 
+header .logo img {
+    cursor: pointer;
+}
+
+header .nav-links {
+    list-style: none;
+    display: flex;
+}
+
+header .nav-links li {
+    margin: 0 20px;
+}
+
+header .nav-links li a {
+    text-decoration: none;
+    color: var(--olive);
+}
+
+/* IMAGEN Y ARTICULO*/
+
+.img-container {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.main-foto {
+    width: 100vw;
+    height: auto;
+}
+
+.text-container {
+    display: grid;
+    width: max-content;
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+}
+
+main h1 {
+    display: block;
+    color: var(--background-color);
+    font-size: 4em;
+    text-align: right;
+}
+
+.text-content {
+    text-align: left;
+    background-color: var(--background-color);
+    color: var(--dark-green);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    max-height: 30vh;
+}
+
+/* FORMULARIO */
+
+.form-container {
+    background-color: var(--background-color);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.suscribirse {
+    background-color: var(--base-color);
+    color: var(--olive);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 50vh;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 5px 0;
+}
+
+input {
+    border-radius: 3px;
+    height: 2.3vh;
+    background-color: var(--background-color);
+    color: var(--dark-green);
+    border: none;
+    font-size: 0.7em;
+}
+
+#topics {
+    border-radius: 4px;
+    padding: 5px;
+    height: 6vh;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    border: none;
+    border-radius: 5px;
+    background-color: var(--olive);
+    color: var(--background-color);
+    font-size: 0.95em;
+    width: 25vw;
+    height: 3.6vh;
+}
+
+.btn:hover {
+    background-color: var(--light-green);
+    transition: all 150ms ease-in-out;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: var(--base-color);
+    padding: 20px 0;
+    text-align: center;
+    color: var(--olive);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+@media (max-width: 800px)and (orientation:portrait) {
+    .text-container {
+        display: grid;
+        width: max-content;
+        position: absolute;
+        top: 50%;
+        left: 60%;
+        bottom: 1%;
+        transform: translate(-50%, -50%);
+    }
+
+    main h1 {
+        max-width: 80%;
+        display: grid;
+        color: var(--background-color);
+        font-size: 2em;
+        text-align: right;
+    }
+ }
