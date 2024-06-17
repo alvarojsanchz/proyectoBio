@@ -6,6 +6,13 @@
     <link rel="stylesheet" href="main.css">
     <title>Parques Nacionales</title>
     <link rel="stylesheet" href="parques.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        #mapa {
+            height: 600px;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
     
@@ -24,7 +31,6 @@
 </header>
 
 </body>
-<<<<<<< HEAD
     <div class="container">
 
         <div>
@@ -42,7 +48,7 @@
           
             <article class="right">
                   <div class="img-container">
-                    <img class="img" src="images/Pisba.jpg" alt="Parque Nacional Natural Pisba">
+                    <img class="img" src="images/pisba.jpg" alt="Parque Nacional Natural Pisba">
                       <h4>Parque nacional natural Pisba</h4>
                     </div>
                     <div class="img-container">
@@ -62,4 +68,32 @@
         </div>
     </div>
 
+<div class="container">   
+
+    <div id="mapa"></div>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <script> 
+     var map = L.map('mapa').setView([5.091,-73.894], 8);
+     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          }).addTo(map);
+
+    var marker = L.marker([6.506,-72.136]).addTo(map)
+    .bindPopup('<b> Parque Nacional Natural El Cocuy</b>').openPopup();
+    var marker = L.marker([5.9166,-72.5977]).addTo(map)
+    .bindPopup('<b> Parque Nacional Natural Pisba</b>').openPopup();
+    var marker = L.marker([5.6064,-72.7734]).addTo(map)
+    .bindPopup('<b> Parque Nacional Natural Unidad Biogeográfica de Siscuncí Oceta</b>').openPopup();
+    var marker = L.marker([4.5655,-73.7512]).addTo(map)
+    .bindPopup('<b> Parque Nacional Natural Chingaza</b>').openPopup();
+    var marker = L.marker([5.2663,-73.9977]).addTo(map)
+    .bindPopup('<b> Páramo de Guargua y Laguna Verde</b>').openPopup();
+    var marker = L.marker([3.9410,-74.1138]).addTo(map)
+    .bindPopup('<b> Parque Nacional Natural Sumapaz</b>').openPopup();
+
+</script>
+</div>
+</body>
+</header>
 </html>
