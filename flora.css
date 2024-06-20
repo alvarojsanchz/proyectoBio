@@ -36,16 +36,73 @@ header .logo img {
 header .nav-links {
     list-style: none;
     display: flex;
+    align-items: center;
+    height: 100%;
 }
 
 header .nav-links li {
     margin: 0 20px;
+    position: relative; 
 }
 
 header .nav-links li a {
     text-decoration: none;
     color: var(--olive);
 }
+
+/* DROPDOWN*/
+.dropdown {
+    display: flex;
+    align-items: center;
+}
+
+.dropdown .dropbtn {
+    background-color: var(--base-color);
+    color: var(--olive);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center; 
+    padding: 0 10px;
+    height: 100%; 
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--base-color);
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    flex-direction: column;
+    top: 100%;
+}
+
+.dropdown-content a {
+    color: var(--olive);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--light-green);
+    color: white;
+}
+
+
+.show {
+    display: flex;
+}
+
+.dropdown-content a {
+    font-size: 13px;
+}
+
+#info {
+    font-size: 20px;
+}
+/* FIN DROPDOWN */
 
 .container {
     display: flex;
