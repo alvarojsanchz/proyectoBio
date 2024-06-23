@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="main.css">
     <title>Proyecto Biodiversidad</title>
     <link rel="stylesheet" href="Bio.css">
+    <link rel="script" href="main.js">
 </head>
 <body>
     
@@ -18,7 +19,19 @@
             <li><a href="ecosistemas.html" target="_blank" rel="noopener noreferrer">Ecosistemas</a></li>
             <li><a href="fauna.html" target="_blank" rel="noopener noreferrer">Fauna</a></li>
             <li><a href="flora.html" target="_blank" rel="noopener noreferrer">Flora</a></li>
-            <li><a href="parques.html" target="_blank" rel="noopener noreferrer" >Parques Nacionales</a></li>
+            <li class="dropdown">
+                <a href="parques.html" target="_blank" rel="noopener noreferrer">Parques Nacionales</a>
+                <button class="dropbtn">▼</button>
+                <div class="dropdown-content">
+                    <a href="#">Parque Natural Nacional Chingaza</a>
+                    <a href="#">Parque Natural Nacional El Cocuy</a>
+                    <a href="#">Paramo de Guargua y Laguna Verde</a>
+                    <a href="#">Parque Nacional Natural Sicuncí Ocetá</a>
+                    <a href="#">Parque Nacional Natural Pisba</a>
+                    <a href="#">Parque Nacional Natural Sumapaz</a>
+                    <a id="info" href="#">Más Información</a>
+                </div>
+            </li>
         </ul>
     </nav>
 </header>
@@ -75,5 +88,24 @@
         <p>&copy; 2024 Proyecto Bio. Todos los derechos reservados.</p>
     </div>
 </footer>
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const dropdown = document.querySelector('.dropdown');
+        const dropdownContent = document.querySelector('.dropdown-content');
+        const dropbtn = document.querySelector('.dropbtn');
+
+        dropbtn.addEventListener('click', (event) => {
+            event.preventDefault();
+            dropdownContent.classList.toggle('show');
+        });
+
+        // Cierra el dropdown si se hace clic fuera de él
+        window.addEventListener('click', (event) => {
+            if (!dropdown.contains(event.target)) {
+                dropdownContent.classList.remove('show');
+            }
+        });
+    });
+</script>
 </body>
 </html>
