@@ -230,22 +230,30 @@ footer {
 }
 
 
-@media (max-width: 800px)and (orientation:portrait) {
-    .text-container {
-        display: grid;
-        width: max-content;
-        position: absolute;
-        top: 50%;
-        left: 60%;
-        bottom: 1%;
-        transform: translate(-50%, -50%);
-    }
-
+ @media (max-width: 1200px) {
     main h1 {
-        max-width: 80%;
-        display: grid;
-        color: var(--background-color);
-        font-size: 2em;
-        text-align: right;
+        font-size: 3em;
+        left: 55%;
     }
- }
+}
+@media (max-width: 992px) {
+    main h1 {
+        font-size: 2.5em;
+        left: 50%;
+    }
+}
+@media (max-width: 768px) {
+    .text-container {
+        left: 50%;
+    }
+    main h1 {
+        font-size: 2em;
+        text-align: center;
+    }
+}
+@media (max-width: 576px) {
+    main h1 {
+        font-size: 1.5em;
+        left: 45%;
+    }
+}

@@ -144,10 +144,17 @@ article.left p {
     order: 2;
 }
 
+.img {
+    width: 250px;
+    height: 150;
+    aspect-ratio: 16/9; /*Ajusta imagen al tamaño sin distorsionarse*/
+}
+
 .img-container {
     position: relative;
     max-width: 45%;
 }
+
 
 .img-container img {
     width: 100%;
@@ -166,6 +173,7 @@ article.left p {
     padding: 10px 0;
     border-radius: 0 0 8px 8px;
 }
+    
 
 
 footer {
