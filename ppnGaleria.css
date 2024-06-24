@@ -49,6 +49,42 @@ header .nav-links li a {
     text-decoration: none;
     color: var(--olive);
 }
+/* FIN HEADER */
+
+
+/* Estilos de la galeria */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 250px;
+    grid-gap: 20px;
+    padding: 100px 0;
+}
+
+.box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.box:nth-child(1) {
+    grid-column-start: span 2;
+}
+
+.box:nth-child(4) {
+    grid-column-start: span 2;
+}
+
+h2 {
+    margin-top: 30px;
+    color: var(--dark-green);
+    text-align: center;
+}
+/* Fin de la galería */
+
 
 /* DROPDOWN*/
 
@@ -104,84 +140,8 @@ header .nav-links li a {
 }
 /* FIN DROPDOWN */
 
-.container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 20px;
-}
 
-article {
-    display: flex;
-    align-items: center;
-    background-color: var(--background-color);
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-article p {
-    max-width: 55%;
-    padding: 1em;
-    text-align: justify;
-
-}
-
-article.right .img-container {
-    order: 3;
-    margin-right: 20px;
-    margin-left: auto;
-}
-
-article.right p {
-    order: 1;
-    padding: 1em;
-    text-align: justify;
-}
-
-article.left .img-container {
-    order: 1;
- /*   padding: 1em; */
-    margin-right: auto;
-}
-
-article.left p {
-    order: 2;
-    padding: 1em;
-    text-align: justify;
-}
-
-.img {
-    width: 250px;
-    height: 150;
-    aspect-ratio: 19/9; /*Ajusta imagen al tamaño sin distorsionarse*/
-}
-
-.img-container {
-    position: sticky;
-    max-width: 50%;
-    
-}
-
-
-.img-container img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-.img-container h2 {
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    margin: 0;
-    background-color: var(--base-color);
-    color: var(--dark-green);
-    text-align: center;
-    padding: 20px;
-    border-radius: 0 0 8px 8px;
-}
-    
+/* FOOTER */
 
 footer {
     background-color: var(--base-color);
@@ -197,4 +157,3 @@ footer {
     flex-direction: column;
     align-items: center;
 }
-

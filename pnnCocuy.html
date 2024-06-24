@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parque Nacional Natural El Cocuy</title>
+    <link rel="stylesheet" href="ppnGaleria.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="main.html" rel="noopener noreferrer"><img src="images/logoProyectoSF.png" alt="logo-proyecto" width="100px" height="100px"></a>
+        </div>
+        <nav class="nav-bar">
+            <ul class="nav-links">
+                <li><a href="ecosistemas.html" rel="noopener noreferrer">Ecosistemas</a></li>
+                <li><a href="fauna.html" rel="noopener noreferrer">Fauna</a></li>
+                <li><a href="flora.html" rel="noopener noreferrer">Flora</a></li>
+                <li class="dropdown">
+                    <a href="parques.html" rel="noopener noreferrer">Parques Nacionales</a>
+                    <button class="dropbtn">▼</button>
+                    <div class="dropdown-content">
+                        <a href="pnnChingaza.html">Parque Natural Nacional Chingaza</a>
+                        <a href="pnnCocuy.html">Parque Natural Nacional El Cocuy</a>
+                        <a href="paramoGuargua.html">Paramo de Guargua y Laguna Verde</a>
+                        <a href="pnnOceta.html">Parque Nacional Natural Sicuncí Ocetá</a>
+                        <a href="pnnPisba.html">Parque Nacional Natural Pisba</a>
+                        <a href="pnnSumapaz.html">Parque Nacional Natural Sumapaz</a>
+                        <a id="info" href="https://www.parquesnacionales.gov.co/">Más Información</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Parque Nacional Natural El Cocuy</h2>
+    <div class="container">
+        <div class="box">
+            <img src="/images/Galerias/cocuy1.jpg" alt="foto paisaje parque nacional natural chingaza">
+        </div>
+        <div class="box">
+            <img src="/images/Galerias/cocuy2.jpg" alt="foto paisaje parque nacional natural chingaza">
+        </div>
+        <div class="box">
+            <img src="/images/Galerias/cocuy3.jpg" alt="foto paisaje parque nacional natural chingaza">
+        </div>
+        <div class="box">
+            <img src="/images/Galerias/cocuy4.jpeg" alt="foto paisaje parque nacional natural chingaza">
+        </div>
+        <div class="box">
+            <img src="/images/Galerias/cocuy5.jpg" alt="foto paisaje parque nacional natural chingaza">
+        </div>
+        <div class="box">
+            <img src="/images/Galerias/cocuy6.jpg" alt="foto paisaje parque nacional natural chingaza">
+        </div>
+        <div class="box">
+            <img src="/images/Galerias/cocuy7.webp" alt="foto paisaje parque nacional natural chingaza">
+        </div>
+    </div>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Proyecto Bio. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!--Script del dropdown-->
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const dropdown = document.querySelector('.dropdown');
+            const dropdownContent = document.querySelector('.dropdown-content');
+            const dropbtn = document.querySelector('.dropbtn');
+    
+            dropbtn.addEventListener('click', (event) => {
+                event.preventDefault();
+                dropdownContent.classList.toggle('show');
+            });
+    
+            // Cierra el dropdown si se hace clic fuera de él
+            window.addEventListener('click', (event) => {
+                if (!dropdown.contains(event.target)) {
+                    dropdownContent.classList.remove('show');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
