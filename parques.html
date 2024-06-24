@@ -29,13 +29,13 @@
                     <a href="parques.html" rel="noopener noreferrer">Parques Nacionales</a>
                     <button class="dropbtn">▼</button>
                     <div class="dropdown-content">
-                        <a href="PN Chingaza.html">Parque Natural Nacional Chingaza</a>
-                        <a href="PN Cocuy.html">Parque Natural Nacional El Cocuy</a>
-                        <a href="PN Paramo de Guargua y Laguna Verde.html">Paramo de Guargua y Laguna Verde</a>
-                        <a href="PN Siscunsi.html">Parque Nacional Natural Sicuncí Ocetá</a>
-                        <a href="PN Pisba.html">Parque Nacional Natural Pisba</a>
-                        <a href="PN Sumapaz.html">Parque Nacional Natural Sumapaz</a>
-                        <a id="info" href="#">Más Información</a>
+                        <a href="pnnChingaza.html">Parque Natural Nacional Chingaza</a>
+                        <a href="pnnCocuy.html">Parque Natural Nacional El Cocuy</a>
+                        <a href="paramoGuargua.html">Paramo de Guargua y Laguna Verde</a>
+                        <a href="pnnOceta.html">Parque Nacional Natural Sicuncí Ocetá</a>
+                        <a href="pnnPisba.html">Parque Nacional Natural Pisba</a>
+                        <a href="pnnSumapaz.html">Parque Nacional Natural Sumapaz</a>
+                        <a id="info" href="https://www.parquesnacionales.gov.co/">Más Información</a>
                     </div>
                 </li>
             </ul>
@@ -58,7 +58,8 @@
         </div>
         <div>
           
-            <article class="right">
+            <article class="info">
+                <div class="img-section">
                   <div class="img-container">
                     <img class="img" src="images/pisba.jpg" alt="Parque Nacional Natural Pisba">
                       <h4>Parque nacional natural Pisba</h4>
@@ -66,7 +67,9 @@
                     <div class="img-container">
                         <img class="img" src="images/chingaza.jpg" alt="Parque Nacional Chingaza">
                           <h4>Parque nacional natural Chingaza</h4>
-                        </div>
+                    </div>
+                </div>
+                <div class="list">
                     <ul>           
                         <li>Parque Nacional </li>
                         <li>Reserva Natural </li>
@@ -74,7 +77,8 @@
                         <li>Santuario de Fauna </li>
                         <li>Santuario de Flora </li>
                         <li>Vía Parque </li>
-                        </ul>
+                    </ul>
+                </div>
                   </article>
 
         </div>
@@ -83,7 +87,6 @@
 <div class="container">   
 
 <!--script del mapa-->
-<h2>Ubicación</h2>
     <div id="mapa"></div>
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
@@ -129,6 +132,10 @@
     });
 </script>
 </div>
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2024 Proyecto Bio. Todos los derechos reservados.</p>
+    </div>
+</footer>
 </body>
-</header>
 </html>

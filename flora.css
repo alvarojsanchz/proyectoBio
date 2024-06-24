@@ -51,6 +51,7 @@ header .nav-links li a {
 }
 
 /* DROPDOWN*/
+
 .dropdown {
     display: flex;
     align-items: center;
@@ -90,7 +91,6 @@ header .nav-links li a {
     color: white;
 }
 
-
 .show {
     display: flex;
 }
@@ -121,7 +121,7 @@ article {
 }
 
 article p {
-    max-width: 55%;
+    max-width: 70%;
     padding: 1em;
     text-align: justify;
 
@@ -154,7 +154,7 @@ article.left p {
 .img {
     width: 250px;
     height: 150;
-    aspect-ratio: 16/9; /*Ajusta imagen al tamaño sin distorsionarse*/
+    aspect-ratio: 19/9; /*Ajusta imagen al tamaño sin distorsionarse*/
 }
 
 .img-container {
