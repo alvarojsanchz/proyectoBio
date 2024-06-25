@@ -49,42 +49,6 @@ header .nav-links li a {
     text-decoration: none;
     color: var(--olive);
 }
-/* FIN HEADER */
-
-
-/* Estilos de la galeria */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 250px;
-    grid-gap: 20px;
-    padding: 100px 0;
-}
-
-.box img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 8px;
-}
-
-.box:nth-child(1) {
-    grid-column-start: span 2;
-}
-
-.box:nth-child(4) {
-    grid-column-start: span 2;
-}
-
-h2 {
-    margin-top: 30px;
-    color: var(--dark-green);
-    text-align: center;
-}
-/* Fin de la galería */
-
 
 /* DROPDOWN*/
 
@@ -127,6 +91,7 @@ h2 {
     color: white;
 }
 
+
 .show {
     display: flex;
 }
@@ -140,20 +105,108 @@ h2 {
 }
 /* FIN DROPDOWN */
 
-
-/* FOOTER */
-
-footer {
-    background-color: var(--base-color);
-    padding: 20px 0;
-    text-align: center;
-    color: var(--olive);
-}
-
-.footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
+.container {
     display: flex;
     flex-direction: column;
+    gap: 20px;
+    padding: 20px;;
+    background-color: var(--background-color);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+article {
+    display: flex;
     align-items: center;
+    background-color: var(--background-color);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.img-container {
+    position: relative;
+    display: flex;
+    max-width: 40%;
+    
+}
+
+.img-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 9px;
+}
+
+.img-container h4 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+    background-color: var(--base-color);
+    color: var(--dark-green);
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 0 0 8px 8px;
+}
+
+article.right .img-container {
+    order: 2;
+    margin-right: 0;
+    margin-left: 20px;
+}
+
+article.right p {
+    order: 1;
+    text-align: left;
+}
+h1 {
+    text-align: center;
+}
+h2 {
+    text-align: left;
+
+}
+h3 {
+    text-align: center;
+
+}
+p {
+    text-align: justify;
+}
+.slider-frame {
+	width: 1280px;
+    height: auto;
+	margin:50px auto 0;
+	overflow: hidden;
+}
+
+.slider-frame ul {
+	display: flex;
+	padding: 0;
+	width: 400%;
+	
+	animation: slide 20s infinite alternate ease-in-out;
+}
+
+.slider-frame li {
+	width: 100%;
+	list-style: none;
+}
+
+.slider-frame img {
+	width: 100%;
+}
+
+@keyframes slide {
+	0% {margin-left: 0;}
+	20% {margin-left: 0;}
+	
+	25% {margin-left: -100%;}
+	45% {margin-left: -100%;}
+	
+	50% {margin-left: -200%;}
+	70% {margin-left: -200%;}
+	
+	75% {margin-left: -300%;}
+	100% {margin-left: -300%;}
 }
