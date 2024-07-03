@@ -145,17 +145,59 @@ main h1 {
     min-height: 30vh;
 }
 
-/* FORMULARIO */
+/* FORMULARIO Y CONTACTO */
+.section-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px 10px 20px;
+}
+
+.contacto-container {
+    background-color: var(--background-color);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px 10px 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 49%;
+}
+
+.contacto {
+    background-color: var(--base-color);
+    color: var(--olive);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 55vh;
+    width: 80%;
+}
+
+.contacto-text {
+    padding: 10px;
+}
+
+.contacto-icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
 
 .form-container {
     background-color: var(--background-color);
     border-radius: 8px;
     padding: 20px;
-    margin: 10px 10px;
+    margin: 10px 20px 10px 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 49%;
 }
 
 .suscribirse {
@@ -165,7 +207,12 @@ main h1 {
     padding: 20px;
     margin: 10px 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    height: 50vh;
+    height: 55vh;
+    width: 80%;
+}
+
+.titulo {
+    text-align: center;
 }
 
 .formulario {
@@ -226,9 +273,17 @@ footer {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
+a {
+    text-decoration: none;
+    color: var(--olive);
+}
+
+
+/* MEDIA QUERIES */
 
  @media (max-width: 1200px) {
     main h1 {

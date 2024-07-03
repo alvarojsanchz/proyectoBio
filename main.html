@@ -7,6 +7,7 @@
     <title>Proyecto Biodiversidad</title>
     <link rel="stylesheet" href="Bio.css">
     <link rel="script" href="main.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css" integrity="sha512-MqL4+Io386IOPMKKyplKII0pVW5e+kb+PI/I3N87G3fHIfrgNNsRpzIXEi+0MQC0sR9xZNqZqCYVcC61fL5+Vg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     
@@ -53,39 +54,61 @@
                 </p>
             </article>
         </div>
-    <div class="form-container">
-    <section class="suscribirse">
-        <h2>Suscríbete a nuestro Newsletter</h2>
-        <form class="formulario" action="suscribirse.html" method="post">
-            <label for="name">Nombre:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="frequency">Frecuencia del Boletín:</label>
-            <div class="radio-group">
-                <input type="radio" id="daily" name="frequency" value="daily">
-                <label for="daily">Diaria</label>
 
-                <input type="radio" id="weekly" name="frequency" value="weekly" checked>
-                <label for="weekly">Semanal</label>
+        <div class="section-div">
+            <div class="form-container">
+            <section class="suscribirse">
+                <h2 class="titulo">Suscríbete a nuestro Newsletter</h2>
+                <form class="formulario" action="suscribirse.html" method="post">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="frequency">Frecuencia del Boletín:</label>
+                    <div class="radio-group">
+                        <input type="radio" id="daily" name="frequency" value="daily">
+                        <label for="daily">Diaria</label>
 
-                <input type="radio" id="monthly" name="frequency" value="monthly">
-                <label for="monthly">Mensual</label>
+                        <input type="radio" id="weekly" name="frequency" value="weekly" checked>
+                        <label for="weekly">Semanal</label>
+
+                        <input type="radio" id="monthly" name="frequency" value="monthly">
+                        <label for="monthly">Mensual</label>
+                    </div>
+
+                    <label for="topics">Temas de Interés:</label>
+                    <input type="text" id="topics" name="topics" placeholder="E.g., Fauna, Flora, Parques Nacionales">
+                    <br>
+                    <div class="btn-container">
+                    <button class="btn" type="submit">Suscribirse</button>
+                    </div>
+                </form>
+            </section>
             </div>
-
-            <label for="topics">Temas de Interés:</label>
-            <input type="text" id="topics" name="topics" placeholder="E.g., Fauna, Flora, Parques Nacionales">
-            <br>
-            <div class="btn-container">
-            <button class="btn" type="submit">Suscribirse</button>
+            <div class="contacto-container">
+                <section class="contacto">
+                    <h2 class="titulo">Contacto</h2>
+                <div class="contacto-text"> 
+                    <p>¡Estamos aquí para ayudarte! Si tienes alguna pregunta, inquietud o simplemente deseas más información, no dudes en ponerte en contacto con nosotros. Aquí encontrarás nuestros canales de contacto. <br>Nuestro equipo estará encantado de asistirte lo antes posible. ¡Esperamos saber de ti pronto!</p>
+                </div>
+                <div class="contacto-icons">
+                    <p><i class="ri-mail-line"></i>       contacto@proyectobio.com</p>
+                    <p><i class="ri-facebook-fill"></i>      Proyecto Bio</p>
+                    <p><i class="ri-instagram-line"></i>    @proyectobio</p>
+                    <p><i class="ri-twitter-x-line"></i>    @proyectobio</p>
+                </div>    
+                </section>
             </div>
-        </form>
-    </section>
-    </div>
+        </div>    
 </main>
 <footer>
     <div class="footer-content">
-        <p>&copy; 2024 Proyecto Bio. Todos los derechos reservados.</p>
+        <p>&copy; 2024 Proyecto Bio. Todos los derechos reservados.</p> 
+    <div class="social">    
+        <a href="https://facebook.com"><i class="ri-facebook-fill"></i></a>
+        <a href="https://instagram.com"><i class="ri-instagram-line"></i></a>
+        <a href="https://twitter.com"><i class="ri-twitter-x-line"></i></a>
+    </div>    
     </div>
 </footer>
 <script>
