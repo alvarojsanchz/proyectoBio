@@ -350,19 +350,19 @@ article {
 .img-container img {
     width: 100%;
     height:min-content;
-    border-radius: 9px;
+    border-radius:9px;
 }
 
 .img-container h4 {
     position: absolute;
     bottom: 0;
     width: 100%;
-    margin: 0;
+    margin:auto;
     background-color: var(--base-color);
     color: var(--dark-green);
     text-align: center;
-    padding: 10px 0;
-    border-radius: 0 0 8px 8px;
+    padding: 0px 0px;
+    
 }
 
 

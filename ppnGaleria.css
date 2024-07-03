@@ -189,7 +189,7 @@ p {
 	padding: 0;
 	width: 400%;
 	
-	animation: slide 20s infinite alternate ease-in-out;
+	animation: slide 15s infinite alternate ease-in-out;
 }
 
 .slider-frame li {
