@@ -2,7 +2,7 @@ ProyectoBio
 Fase 1 del Proyecto Final: Explorando la Biodiversidad de Boyacá y Cundinamarca
 
 Descripción
-ProyectoBio es la primera fase de un ambicioso proyecto de co-creación diseñado para el Bootcamp de Programación Nivel Explorador del programa Talento Tech. Este proyecto tiene como objetivo explorar y resaltar la biodiversidad de las regiones de Boyacá y Cundinamarca a través de una página web interactiva.
+ProyectoBio es la primera fase del proyecto de co-creación diseñado para el Bootcamp de Programación Nivel Explorador del programa Talento Tech. Este proyecto tiene como objetivo explorar y resaltar la biodiversidad de las regiones de Boyacá y Cundinamarca a través de una página web interactiva.
 
 Tecnologías Utilizadas
 HTML5: Para la estructura y el contenido de la página web.
