@@ -1,5 +1,5 @@
+{% from 'macros.html' import table_component %}
 {% extends 'base.html' %}
-
 
 {% block head %}
 
@@ -30,6 +30,8 @@
             </article>
         </div>
         <div>
+
+            {{ table_component() }}
           
             <article class="info">
                 <div class="img-section">
@@ -86,4 +88,8 @@
     .bindPopup('<b> Parque Nacional Natural Sumapaz</b>').openPopup();
 
 </script>
+
+<script src="{{ url_for('static', filename='main.js') }}"></script>
+
+
 {% endblock %}

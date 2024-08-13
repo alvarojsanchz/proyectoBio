@@ -19,3 +19,23 @@
         </div>
     </div>    
 {% endmacro %}    
+
+{% macro table_component() %}
+    <h1>Páramos por Departamento</h1>
+    <label for="departamento">Selecciona un departamento:</label>
+    <select id="departamento">
+        <option value="Boyaca">Boyacá</option>
+        <option value="Cundinamarca">Cundinamarca</option>
+    </select>
+    <button onclick="getParamos()">Buscar</button>
+    <table id="paramos-table" border="1">
+        <thead>
+            <tr>
+                <th>Nombre del Páramo</th>
+                <th>Área Total (hectáreas)</th>
+                <th>Municipios</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+{% endmacro %}    
