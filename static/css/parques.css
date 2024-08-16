@@ -401,3 +401,15 @@ a {
     text-decoration: none;
     color: var(--olive);
 }
+<<<<<<< HEAD
+   
+table, th, td {
+    border: 1px solid white;
+    border-collapse: collapse;
+  }
+  th, td {
+    background-color: #fbfcc6;
+  }
+
+=======
+>>>>>>> 4a1fbf18f40d127a58c0d6c458034476e5073985
