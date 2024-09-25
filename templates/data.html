@@ -12,7 +12,7 @@
 {% block content %}
 
 <div class="container"></div>
-    <h1 class="mt-5">Data Páramos</h1>       
+    <h1 class="mt-5">Data Páramos</h3>       
     <input class="form-control filter-input" id="filterInput" type="text" placeholder="Buscar...">
 
     <div id="tableContainer">
@@ -20,6 +20,19 @@
     </div>
 </div>
 
+<div class="container"></div>
+      <div class="img-container">
+        <img class="img" src="{{ url_for('static', filename='img/images/Figure_1.png') }}" alt="altiplano" />
+
+</div>
+
+<div class="container"></div>
+      <div class="img-container">
+        <img class="img" src="{{ url_for('static', filename='img/images/Figure_2.png') }}" alt="altiplano" />
+        
+</div>
+
+<!--script de la Data Paramos-->
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
@@ -37,5 +50,6 @@
         });
     });
 </script>
+
 
 {% endblock %}

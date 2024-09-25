@@ -54,11 +54,13 @@ def pnn_sumapaz():
 def paramo_guargua():
     return render_weather_template('paramoGuargua.html')
 
+# DEFINIMOS LAS RUTAS PARA RENDERIZAR DATOS CSV DE PARAMOS
+
 @app.route('/data')
 def data():
     df = pd.read_csv('xn--Pramos-pta.csv', sep=',', index_col="ComplejoNombre")
     paramos_consolidado = df.groupby('DistritoNombre').sum('AreaHa')
-    html_table = paramos_consolidado.to_html(classes='table table-striped', index=False)
+    html_table = df.to_html(classes='table table-striped', index=False)
     return render_template('data.html', table=html_table)    
 
 @app.route('/get_paramos', methods=['POST'])
@@ -112,3 +114,21 @@ def render_weather_template(template_name):
 
 if __name__ == '__main__':
     app.run(port=5500, debug=True)
+
+
+# LOS GRAFICOS SE RENDERIZAN COMO IMAGENES
+
+#Gráfico de áreas
+
+#total_areas = paramos_consolidado.sum(axis=1);
+#paramos_consolidado.plot(kind='bar');
+#plt.bar(total.index, total);
+#plt.title('Total Areas');
+#plt.xlabel('ComplejoNombre');
+#plt.ylabel('AreaHa');
+#plt.show();
+
+#Gráficos apilados:
+#paramos_consolidado.plot(kind='barh', title="Áreas Totales Páramos Cundinamarca - Boyacá", ylabel='ComplejoNombre') 
+
+#plt.show(); 
