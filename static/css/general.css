@@ -186,3 +186,14 @@ a {
     text-decoration: none;
     color: var(--olive);
 }
+
+table, th, td {
+    border: 1px solid white;
+    border-collapse: collapse;
+  }
+  th, td {
+    background-color: #fbfcc6;
+  }
+.form-control-filter-input {
+    margin-bottom: 1rem;
+}
