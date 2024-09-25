@@ -1,6 +1,10 @@
 from flask import Flask, render_template, request, jsonify
 import requests
 from collections import defaultdict
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
 
 app = Flask(__name__)
 
@@ -49,6 +53,15 @@ def pnn_sumapaz():
 @app.route('/paramoGuargua', methods=['GET', 'POST'])
 def paramo_guargua():
     return render_weather_template('paramoGuargua.html')
+
+# DEFINIMOS LAS RUTAS PARA RENDERIZAR DATOS CSV DE PARAMOS
+
+@app.route('/data')
+def data():
+    df = pd.read_csv('xn--Pramos-pta.csv', sep=',', index_col="ComplejoNombre")
+    paramos_consolidado = df.groupby('DistritoNombre').sum('AreaHa')
+    html_table = df.to_html(classes='table table-striped', index=False)
+    return render_template('data.html', table=html_table)    
 
 @app.route('/get_paramos', methods=['POST'])
 def get_paramos():
@@ -101,3 +114,21 @@ def render_weather_template(template_name):
 
 if __name__ == '__main__':
     app.run(port=5500, debug=True)
+
+
+# LOS GRAFICOS SE RENDERIZAN COMO IMAGENES
+
+#Gráfico de áreas
+
+#total_areas = paramos_consolidado.sum(axis=1);
+#paramos_consolidado.plot(kind='bar');
+#plt.bar(total.index, total);
+#plt.title('Total Areas');
+#plt.xlabel('ComplejoNombre');
+#plt.ylabel('AreaHa');
+#plt.show();
+
+#Gráficos apilados:
+#paramos_consolidado.plot(kind='barh', title="Áreas Totales Páramos Cundinamarca - Boyacá", ylabel='ComplejoNombre') 
+
+#plt.show(); 
