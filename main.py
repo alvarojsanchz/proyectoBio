@@ -1,6 +1,10 @@
 from flask import Flask, render_template, request, jsonify
 import requests
 from collections import defaultdict
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
 
 app = Flask(__name__)
 
@@ -49,6 +53,13 @@ def pnn_sumapaz():
 @app.route('/paramoGuargua', methods=['GET', 'POST'])
 def paramo_guargua():
     return render_weather_template('paramoGuargua.html')
+
+@app.route('/data')
+def data():
+    df = pd.read_csv('xn--Pramos-pta.csv', sep=',', index_col="ComplejoNombre")
+    paramos_consolidado = df.groupby('DistritoNombre').sum('AreaHa')
+    html_table = paramos_consolidado.to_html(classes='table table-striped', index=False)
+    return render_template('data.html', table=html_table)    
 
 @app.route('/get_paramos', methods=['POST'])
 def get_paramos():
